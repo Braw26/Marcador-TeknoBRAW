@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TaekwondoScorer - Sistema de Marcaje Olímpico para Taekwondo. App oficial para jueces y árbitros.">
+    <meta name="keywords" content="taekwondo, marcador, scorer, jueces, olimpico, app, iOS">
+    <title>TaekwondoScorer - Sistema de Marcaje Olímpico</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            background: white;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .logo img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .version {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 30px 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .screenshot {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .support-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+
+        .support-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .support-card {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .support-card h3 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .support-card a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            word-break: break-all;
+        }
+
+        .support-card a:hover {
+            text-decoration: underline;
+        }
+
+        .requirements {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+
+        .requirements ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .requirements li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .requirements li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .faq {
+            margin: 40px 0;
+        }
+
+        .faq-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .faq-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .tagline {
+                font-size: 1.1em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="icon.png" alt="TaekwondoScorer Logo">
+            </div>
+            <h1>TaekwondoScorer</h1>
+            <p class="tagline">Sistema Profesional de Marcaje Olímpico para Taekwondo</p>
+            <span class="version">Versión 1.1</span>
+            <br>
+            <a href="#" class="download-btn">📱 Descargar en App Store</a>
+        </header>
+
+        <div class="content">
+            <h2>🥋 ¿Qué es TaekwondoScorer?</h2>
+            <p>TaekwondoScorer es la aplicación oficial diseñada para jueces y árbitros de Taekwondo. Permite registrar puntuaciones en tiempo real con precisión profesional, conectándose directamente al sistema de marcaje central mediante tecnología UDP.</p>
+
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Dos Modos de Marcaje</h3>
+                    <p>Interfaz con joysticks virtuales (STICKS) o botones de acumulación rápida (PADS)</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Tiempo de Respuesta Ajustable</h3>
+                    <p>Configura el delay de envío: 0s, 0.5s, 1s o 2s según tu preferencia</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Conexión en Tiempo Real</h3>
+                    <p>Comunicación UDP directa con el módulo central de puntuación</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Sistema de Autorización</h3>
+                    <p>Control de dispositivos mediante Firebase para máxima seguridad</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>Interfaz Intuitiva</h3>
+                    <p>Diseño optimizado para uso en competencias con orientación horizontal</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✨</div>
+                    <h3>Offline Ready</h3>
+                    <p>Funciona sin conexión una vez autorizado el dispositivo</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content requirements">
+            <h2>📋 Requisitos del Sistema</h2>
+            <ul>
+                <li>iPhone o iPad con iOS 17.0 o superior</li>
+                <li>Conexión Wi-Fi para autorización inicial</li>
+                <li>Conexión a red del módulo UDP durante competencias</li>
+                <li>Autorización administrativa del dispositivo</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>🎯 Características Principales</h2>
+            
+            <div class="faq">
+                <div class="faq-item">
+                    <h3>Modo STICKS - Joysticks Virtuales</h3>
+                    <p>Controla la puntuación mediante joysticks táctiles para cada competidor (azul y rojo). Cada dirección representa un tipo de puntuación:</p>
+                    <ul>
+                        <li>⬆️ Arriba: +2 puntos (patada al peto)</li>
+                        <li>➡️ Derecha: +5 puntos (patada giratoria voladora)</li>
+                        <li>⬇️ Abajo: +3 puntos (patada a la cabeza)</li>
+                        <li>⬅️ Izquierda: +4 puntos (patada giratoria a la cabeza)</li>
+                        <li>👆 Toque corto: +1 punto (puño al peto)</li>
+                    </ul>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Modo PADS - Botones Rápidos</h3>
+                    <p>Interfaz con botones dedicados para cada tipo de puntuación. Mantén presionado para acumular puntos continuamente (ideal para puntuaciones rápidas y repetitivas).</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Selección de Juez</h3>
+                    <p>Identifica tu posición como Juez 1, 2 o 3. Cada dispositivo debe configurarse con el número de juez correcto antes de iniciar el marcaje.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Estado de Conexión</h3>
+                    <p>Indicador visual en tiempo real del estado de conexión con el módulo UDP:</p>
+                    <ul>
+                        <li>🟢 Verde: Conectado correctamente</li>
+                        <li>🟠 Naranja: Sin conexión al módulo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="support-section">
+            <h2 style="color: white;">💬 Soporte y Contacto</h2>
+            <p>¿Necesitas ayuda? Estamos aquí para asistirte</p>
+            
+            <div class="support-cards">
+                <div class="support-card">
+                    <h3>📧 Email</h3>
+                    <p>Soporte técnico</p>
+                    <a href="mailto:ing.brauliomc@gmail.com">ing.brauliomc@gmail.com</a>
+                </div>
+                
+                <div class="support-card">
+                    <h3>💬 WhatsApp</h3>
+                    <p>Chat directo</p>
+                    <a href="https://wa.me/5216181234224">+52 618 123 4224</a>
+                </div>
+                
+                <div class="support-card">
+                    <h3>📱 Identificador de Dispositivo</h3>
+                    <p>Presiona el botón "ID" en la app para ver tu identificador único. Proporciónalo al administrador para autorización.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>❓ Preguntas Frecuentes</h2>
+            
+            <div class="faq">
+                <div class="faq-item">
+                    <h3>¿Cómo obtengo autorización para usar la app?</h3>
+                    <p>Contacta al administrador del sistema con tu ID de dispositivo (disponible en el botón "ID" del menú principal). Una vez autorizado, podrás acceder a todas las funcionalidades de marcaje.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Necesito conexión a internet todo el tiempo?</h3>
+                    <p>No. Solo necesitas conexión a internet para la autorización inicial. Una vez autorizado, la app funciona offline. Durante competencias, solo necesitas estar conectado a la red Wi-Fi del módulo de puntuación.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Qué hago si no me conecto al módulo?</h3>
+                    <p>Verifica que estés conectado a la red Wi-Fi correcta del módulo y que el módulo esté encendido. La app intentará reconectar automáticamente cada 5 segundos.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>¿Puedo usar la app en varios dispositivos?</h3>
+                    <p>Sí, cada dispositivo debe ser autorizado individualmente por el administrador. Puedes asignar alias personalizados para identificar fácilmente cada dispositivo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>📄 Documentación</h2>
+            <p>Para más información, consulta los siguientes documentos:</p>
+            <ul style="list-style: none; padding: 20px 0;">
+                <li style="margin: 10px 0;">📖 <a href="manual.html" style="color: #667eea; text-decoration: none; font-weight: bold;">Manual de Usuario Completo</a></li>
+                <li style="margin: 10px 0;">📜 <a href="eula.html" style="color: #667eea; text-decoration: none; font-weight: bold;">Acuerdo de Licencia (EULA)</a></li>
+                <li style="margin: 10px 0;">🔒 <a href="privacy.html" style="color: #667eea; text-decoration: none; font-weight: bold;">Política de Privacidad</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 teknoBRAW. Todos los derechos reservados.</p>
+            <p>TaekwondoScorer - Sistema Profesional de Marcaje Olímpico</p>
+        </footer>
+    </div>
+</body>
+</html>

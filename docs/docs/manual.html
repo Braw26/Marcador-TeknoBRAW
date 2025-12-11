@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Usuario - TaekwondoScorer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #764ba2;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        h3 {
+            color: #667eea;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .version {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .warning {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .success {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #e0e0e0;
+            margin: 40px 0;
+        }
+
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .contact a {
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Volver al inicio</a>
+        
+        <h1>Manual de Usuario - TaekwondoScorer</h1>
+        <span class="version">Versión 1.1</span>
+
+        <hr>
+
+        <h2>📱 Inicio de la Aplicación</h2>
+        <p>Al abrir la app, verás un video de introducción con la versión actual (V1.1) en la parte superior. El video se reproduce automáticamente y te llevará al menú principal al finalizar.</p>
+
+        <hr>
+
+        <h2>🏠 Menú Principal</h2>
+
+        <h3>Estado de Conexión</h3>
+        <ul>
+            <li><strong>Círculo Verde</strong>: Conectado al módulo</li>
+            <li><strong>Círculo Naranja</strong>: No conectado al módulo</li>
+        </ul>
+
+        <h3>Selección de Juez</h3>
+        <p>Elige tu posición como juez:</p>
+        <ul>
+            <li>Juez 1</li>
+            <li>Juez 2</li>
+            <li>Juez 3</li>
+        </ul>
+
+        <h3>Modo de Marcaje</h3>
+        <ul>
+            <li><strong>STICKS</strong>: Interfaz con joysticks virtuales (modo táctil)</li>
+            <li><strong>PADS</strong>: Interfaz con botones de acumulación rápida</li>
+        </ul>
+
+        <h3>Retraso de Tiempo</h3>
+        <p>Selecciona el tiempo de espera antes de enviar el puntaje:</p>
+        <ul>
+            <li><strong>0 segundos</strong>: Envío inmediato</li>
+            <li><strong>0.5 segundos</strong></li>
+            <li><strong>1 segundo</strong></li>
+            <li><strong>2 segundos</strong></li>
+        </ul>
+
+        <h3>Botón "Iniciar Marcaje"</h3>
+        <p>Presiona para entrar a la pantalla de puntuación</p>
+
+        <h3>Botones de Contacto</h3>
+        <ul>
+            <li><strong>ID</strong>: Muestra el identificador único del dispositivo</li>
+            <li><strong>Mail</strong>: Envía un correo a soporte técnico</li>
+            <li><strong>WhatsApp</strong>: Abre chat de WhatsApp con soporte</li>
+        </ul>
+
+        <hr>
+
+        <h2>🎮 Pantalla de Puntuación (Modo STICKS)</h2>
+
+        <div class="note">
+            <strong>Nota:</strong> La orientación se cambia automáticamente a horizontal al entrar a esta pantalla.
+        </div>
+
+        <h3>Joystick Izquierdo (Azul)</h3>
+        <p>Controla los puntajes del <strong>competidor azul</strong>:</p>
+        <ul>
+            <li><strong>Arriba</strong>: +2 puntos (patada al peto)</li>
+            <li><strong>Derecha</strong>: +5 puntos (patada giratoria voladora)</li>
+            <li><strong>Abajo</strong>: +3 puntos (patada a la cabeza)</li>
+            <li><strong>Izquierda</strong>: +4 puntos (patada giratoria a la cabeza)</li>
+            <li><strong>Toque corto</strong>: +1 punto (puño al peto)</li>
+        </ul>
+
+        <h3>Joystick Derecho (Rojo)</h3>
+        <p>Controla los puntajes del <strong>competidor rojo</strong>:</p>
+        <ul>
+            <li>Misma configuración que el joystick azul</li>
+        </ul>
+
+        <h3>Información en Pantalla</h3>
+        <ul>
+            <li><strong>Juez actual</strong> en la esquina superior izquierda</li>
+            <li><strong>Modo de retraso</strong> en la esquina superior derecha</li>
+        </ul>
+
+        <h3>Botón X (Cerrar)</h3>
+        <p>Regresa al menú principal</p>
+
+        <hr>
+
+        <h2>🎯 Pantalla de Puntuación (Modo PADS)</h2>
+
+        <div class="note">
+            <strong>Nota:</strong> La orientación se cambia automáticamente a horizontal al entrar a esta pantalla.
+        </div>
+
+        <h3>Botones Azules (Izquierda)</h3>
+        <p>Para el <strong>competidor azul</strong>:</p>
+        <ul>
+            <li><strong>+4</strong>: Patada giratoria a la cabeza</li>
+            <li><strong>+5</strong>: Patada giratoria voladora</li>
+            <li><strong>+3</strong>: Patada a la cabeza</li>
+            <li><strong>+2</strong>: Patada al peto</li>
+            <li><strong>+1</strong>: Puño al peto</li>
+        </ul>
+
+        <h3>Botones Rojos (Derecha)</h3>
+        <p>Para el <strong>competidor rojo</strong>:</p>
+        <ul>
+            <li>Misma configuración de puntajes</li>
+        </ul>
+
+        <h3>Funcionamiento</h3>
+        <ul>
+            <li>Presiona y mantén el botón para acumular puntos</li>
+            <li>Los puntos se envían cada 200ms mientras mantienes presionado</li>
+            <li>Útil para puntuaciones rápidas y repetitivas</li>
+        </ul>
+
+        <hr>
+
+        <h2>⚠️ Solución de Problemas</h2>
+
+        <h3>El botón "Iniciar Marcaje" no funciona</h3>
+        <p>Contacta al administrador del sistema para verificar la autorización de tu dispositivo</p>
+
+        <h3>No se conecta al módulo</h3>
+        <ul>
+            <li>Verifica que estés conectado a la red Wi-Fi del módulo</li>
+            <li>Asegúrate de que el módulo esté encendido</li>
+        </ul>
+
+        <hr>
+
+        <div class="contact">
+            <h2 style="color: white;">📞 Soporte</h2>
+            <ul style="list-style: none; margin-left: 0;">
+                <li style="margin: 10px 0;"><strong>Email:</strong> <a href="mailto:ing.brauliomc@gmail.com">ing.brauliomc@gmail.com</a></li>
+                <li style="margin: 10px 0;"><strong>WhatsApp:</strong> <a href="https://wa.me/5216181234224">+52 618 123 4224</a></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <p style="text-align: center; color: #999; margin-top: 40px;">
+            <strong>teknoBRAW</strong> - Sistema de Marcaje Olímpico para Taekwondo
+        </p>
+    </div>
+</body>
+</html>

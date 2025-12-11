@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - TaekwondoScorer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #764ba2;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        h3 {
+            color: #667eea;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .date {
+            background: #e8eaf6;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #e0e0e0;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Volver al inicio</a>
+        
+        <h1>Política de Privacidad</h1>
+        <h2 style="margin-top: 10px;">TaekwondoScorer</h2>
+        <div class="date">Última actualización: 11 de diciembre de 2025</div>
+
+        <hr>
+
+        <h2>1. Introducción</h2>
+        <p>teknoBRAW ("nosotros", "nuestro" o "la empresa") respeta su privacidad y se compromete a proteger sus datos personales. Esta Política de Privacidad explica cómo recopilamos, usamos, almacenamos y protegemos su información al utilizar la aplicación TaekwondoScorer ("la Aplicación").</p>
+
+        <hr>
+
+        <h2>2. Información que Recopilamos</h2>
+
+        <h3>2.1 Información Recopilada Automáticamente</h3>
+        <ul>
+            <li><strong>Identificador del Dispositivo (IDFV)</strong>: Identificador único generado por iOS para su dispositivo</li>
+            <li><strong>Número de Dispositivo</strong>: Número consecutivo asignado automáticamente al registrarse</li>
+            <li><strong>Estado de Autorización</strong>: Si su dispositivo está autorizado para usar la Aplicación</li>
+        </ul>
+
+        <h3>2.2 Información Proporcionada Voluntariamente</h3>
+        <ul>
+            <li><strong>Alias del Dispositivo</strong>: Nombre personalizado que el administrador puede asignar a su dispositivo (opcional)</li>
+        </ul>
+
+        <h3>2.3 Datos de Uso</h3>
+        <ul>
+            <li><strong>Datos de Puntuación</strong>: Información enviada durante competencias (número de juez, color del competidor, puntos otorgados)</li>
+            <li><strong>Estado de Conexión</strong>: Información sobre conexión al módulo UDP</li>
+        </ul>
+
+        <hr>
+
+        <h2>3. Cómo Utilizamos Su Información</h2>
+        <p>Utilizamos la información recopilada para los siguientes propósitos:</p>
+        <ul>
+            <li><strong>Identificación y Autorización</strong>: Verificar y autorizar dispositivos para usar la Aplicación</li>
+            <li><strong>Funcionalidad del Servicio</strong>: Permitir el registro de puntuaciones durante competencias</li>
+            <li><strong>Gestión Administrativa</strong>: Permitir a los administradores identificar y gestionar dispositivos autorizados</li>
+            <li><strong>Soporte Técnico</strong>: Proporcionar asistencia y resolver problemas técnicos</li>
+            <li><strong>Mejora del Servicio</strong>: Analizar el uso para mejorar funcionalidades</li>
+        </ul>
+
+        <hr>
+
+        <h2>4. Almacenamiento y Seguridad de Datos</h2>
+
+        <h3>4.1 Ubicación de Almacenamiento</h3>
+        <p>Sus datos se almacenan en:</p>
+        <ul>
+            <li><strong>Firebase Realtime Database</strong>: Servicio de Google Cloud Platform</li>
+            <li><strong>Almacenamiento Local</strong>: UserDefaults en su dispositivo iOS (solo estado de autorización)</li>
+        </ul>
+
+        <h3>4.2 Medidas de Seguridad</h3>
+        <ul>
+            <li>Autenticación mediante token secreto para acceso a base de datos</li>
+            <li>Reglas de seguridad de Firebase que requieren autenticación</li>
+            <li>Conexiones HTTPS cifradas</li>
+            <li>Acceso restringido solo a personal autorizado</li>
+        </ul>
+
+        <h3>4.3 Retención de Datos</h3>
+        <p>Los datos se conservan mientras:</p>
+        <ul>
+            <li>Su dispositivo esté activo y autorizado</li>
+            <li>Sea necesario para cumplir con obligaciones legales</li>
+            <li>Sea necesario para resolver disputas o hacer cumplir acuerdos</li>
+        </ul>
+
+        <hr>
+
+        <h2>5. Compartir Información</h2>
+        <p>NO vendemos, alquilamos ni compartimos su información personal con terceros, excepto en los siguientes casos:</p>
+
+        <h3>5.1 Proveedores de Servicios</h3>
+        <ul>
+            <li><strong>Google (Firebase)</strong>: Para almacenamiento y gestión de base de datos</li>
+        </ul>
+
+        <h3>5.2 Requisitos Legales</h3>
+        <p>Podemos divulgar información si es requerido por ley o si creemos de buena fe que dicha acción es necesaria para:</p>
+        <ul>
+            <li>Cumplir con obligaciones legales</li>
+            <li>Proteger y defender nuestros derechos o propiedad</li>
+            <li>Prevenir o investigar posibles irregularidades</li>
+            <li>Proteger la seguridad personal de usuarios</li>
+        </ul>
+
+        <hr>
+
+        <h2>6. Sus Derechos</h2>
+        <p>Usted tiene derecho a:</p>
+        <ul>
+            <li><strong>Acceso</strong>: Solicitar acceso a sus datos personales</li>
+            <li><strong>Rectificación</strong>: Solicitar corrección de datos inexactos</li>
+            <li><strong>Eliminación</strong>: Solicitar eliminación de sus datos (sujeto a obligaciones legales)</li>
+            <li><strong>Restricción</strong>: Solicitar limitación del procesamiento de sus datos</li>
+            <li><strong>Portabilidad</strong>: Recibir sus datos en formato estructurado</li>
+            <li><strong>Oposición</strong>: Oponerse al procesamiento de sus datos</li>
+        </ul>
+
+        <p>Para ejercer estos derechos, contáctenos a: <strong>ing.brauliomc@gmail.com</strong></p>
+
+        <hr>
+
+        <h2>7. Privacidad de Menores</h2>
+        <p>La Aplicación no está dirigida a menores de 13 años. No recopilamos intencionalmente información personal de menores de 13 años. Si descubrimos que hemos recopilado datos de un menor sin verificación del consentimiento parental, eliminaremos esa información de inmediato.</p>
+
+        <hr>
+
+        <h2>8. Transferencias Internacionales</h2>
+        <p>Sus datos pueden ser transferidos y almacenados en servidores ubicados fuera de su país de residencia, incluyendo Estados Unidos (donde se encuentran los servidores de Firebase/Google Cloud). Al usar la Aplicación, usted consiente estas transferencias.</p>
+
+        <hr>
+
+        <h2>9. Uso de Cookies y Tecnologías Similares</h2>
+        <p>La Aplicación no utiliza cookies de seguimiento. Solo almacena datos localmente en su dispositivo mediante UserDefaults de iOS para funcionalidad esencial (estado de autorización).</p>
+
+        <hr>
+
+        <h2>10. Cambios a Esta Política</h2>
+        <p>Podemos actualizar esta Política de Privacidad periódicamente. Le notificaremos cualquier cambio importante mediante:</p>
+        <ul>
+            <li>Actualización de la fecha de "Última actualización" en esta página</li>
+            <li>Notificación dentro de la Aplicación (si es aplicable)</li>
+        </ul>
+        <p>Le recomendamos revisar esta política periódicamente.</p>
+
+        <hr>
+
+        <h2>11. Contacto</h2>
+        <p>Si tiene preguntas, inquietudes o solicitudes relacionadas con esta Política de Privacidad, contáctenos:</p>
+
+        <div class="highlight">
+            <p><strong>teknoBRAW</strong></p>
+            <p><strong>Email:</strong> ing.brauliomc@gmail.com</p>
+            <p><strong>WhatsApp:</strong> +52 618 123 4224</p>
+        </div>
+
+        <hr>
+
+        <h2>12. Jurisdicción</h2>
+        <p>Esta Política de Privacidad se rige por las leyes de México. Cualquier disputa relacionada con esta política estará sujeta a la jurisdicción exclusiva de los tribunales competentes en México.</p>
+
+        <hr>
+
+        <h2>13. Consentimiento</h2>
+        <p>Al usar TaekwondoScorer, usted consiente la recopilación, uso y almacenamiento de su información según se describe en esta Política de Privacidad.</p>
+
+        <hr>
+
+        <p style="text-align: center; color: #999; margin-top: 40px;">
+            © 2025 teknoBRAW. Todos los derechos reservados.
+        </p>
+    </div>
+</body>
+</html>
